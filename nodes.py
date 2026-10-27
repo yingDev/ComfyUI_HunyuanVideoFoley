@@ -557,6 +557,7 @@ class HunyuanVideoFoleyNode:
             import traceback
             error_msg = f"❌ Generation failed: {str(e)}"
             logger.error(error_msg); logger.error(traceback.format_exc())
+            raise # add by remux
             return create_node_exit_values(
                 silent_audio=silent_audio,
                 passthrough_video=video,
